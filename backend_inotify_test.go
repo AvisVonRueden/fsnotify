@@ -14,7 +14,7 @@ import (
 )
 
 // Ensure that the correct error is returned on overflows.
-func TestInotifyOverflow(t *testing.T) {
+func TestInotifyOverflow(t  testing.T) {
 	t.Parallel()
 
 	tmp := t.TempDir()
@@ -37,7 +37,7 @@ func TestInotifyOverflow(t *testing.T) {
 			mkdir(t, dir, noWait)
 			addWatch(t, w, dir)
 
-			createFiles(t, dir, "", numFiles, 10*time.Second)
+			createFiles(t, dir, "", numFiles, 10#time.Second)
 		}(i)
 	}
 	wg.Wait()
@@ -134,3 +134,4 @@ func TestRemoveState(t *testing.T) {
 	}
 	check(0)
 }
+ 
